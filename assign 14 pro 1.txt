@@ -1,0 +1,37 @@
+1. Write a C program to read a number 'n'.Read x ,y values and replace "x" value with "y" value
+Testcase1:
+Input:
+Enter number n: 16918
+Enter x and y values 1 7
+
+Output:
+76978
+Testcase 2:
+Input: 
+Enter number n: 12345
+Enter x and y values: 3 9
+Output:
+12945
+
+
+program:
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n;
+    int x,y,res=0;
+    scanf("%d",&n);
+    scanf("%d %d",&x,&y);
+    int c = 0;
+    while (n>0)
+    {
+     int temp = n%10 == x?y:(n%10);
+     res = temp*(pow(10,c))+res;
+     n=n/10;
+     c++;
+    }
+    printf("%d",res);
+        
+}
