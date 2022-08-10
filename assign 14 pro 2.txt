@@ -1,0 +1,34 @@
+Write a C program to read a number and print number is "Harshad Number" or "Not Harshad Number"
+Harshad Number: if sum of digits is divisible by given number, then it is known as Harshad number.
+Example:
+n=156 
+1+5+6=12 --- 156/12=0 then 156 is Harshad Number
+TestCase 1:
+Input: 156
+Output : Harshad Number
+Testcase 2:
+Input : 22
+Output: Not Harshad Number
+Explanation: 2+2=4; 22/4!=0 . So 22 is not Harshad Number.
+
+
+program:
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    int sum=0,temp;
+    scanf("%d",&n);
+    while(n-->0)
+    {
+        temp=n%10;
+        sum=sum+temp;
+        n=n/10;
+    }
+    if(temp%sum==0)
+    printf("Harshad number");
+    else
+    printf("not a harshad number");
+    return 0;
+}
