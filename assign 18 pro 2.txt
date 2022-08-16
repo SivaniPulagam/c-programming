@@ -1,0 +1,29 @@
+1.https://www.codechef.com/submit/PRACTICEPERF
+
+#include<stdio.h>
+int main() {
+	int P1,P2,P3,P4;
+	scanf("%d %d %d %d",&P1,&P2,&P3,&P4);
+	int temp=0;
+	    if(P1>9)
+	    {
+	        temp++;
+	    }
+	    if(P2>9)
+	    {
+	        temp++;
+	    }
+	    if(P3>9)
+	    {
+	        temp++;
+	    }
+	    if(P4>9)
+	    {
+	    temp++;
+	    }
+	printf("%d",temp);
+	return 0;
+}
+
+
+
