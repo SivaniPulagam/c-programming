@@ -1,0 +1,38 @@
+2.Write a c program to check each and every number of array if it is prime or not 
+and display all prime numbers of array from right to left?
+
+program:
+
+
+
+#include<stdio.h>
+int main()
+{
+    int arr[5];
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<5;i++)
+    {
+        int flag =0;
+        if(arr[i] == 2)
+        {
+         continue;   
+        }
+        for(int j=2;j<arr[i];j++)
+        {
+            if(arr[i]%j==0)
+            {
+                arr[i] = -1;
+                break;
+            }
+        }
+        
+    }
+    for(int i =4;i>=0;i--)
+    {
+        if(arr[i]!=-1)
+        printf("%d ",arr[i]);
+    }
+}
