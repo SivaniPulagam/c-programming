@@ -1,0 +1,27 @@
+2.digit frequency
+https://www.hackerrank.com/challenges/frequency-of-digits-1/problem?isFullScreen=false
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */      char *s;
+    s=(char *)malloc(1000*sizeof(char));
+    scanf("%s",s);
+    int i,x[10]={0};
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]>='0' && s[i]<='9')
+        {
+            x[s[i]-48]++;        
+        }
+    }   
+    for(i=0;i<10;i++)
+    printf("%d ",x[i]);
+    free(s);  
+    return 0;
+}
