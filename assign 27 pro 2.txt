@@ -1,0 +1,26 @@
+2.Write a C Program to find FACTORIAL of a number using functions with return value
+Example:
+Input: Enter a number :5
+Output:
+120
+
+
+#include <stdio.h>
+
+int fact(int);
+int main()
+{
+    int n;
+    printf("Enter a number");
+    scanf("%d",&n);
+    printf("%d",fact(n));
+}
+int fact(int n)
+{
+   int i,f=1;
+   for(i=1;i<=n;i++)
+   {
+   f=f*i;
+   }
+   return f;
+}
