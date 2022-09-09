@@ -1,0 +1,39 @@
+1. Read a number n. if the number is in fibonacci series print "Yes" otherwise "No"
+Example:
+Input:
+5
+Output:
+Yes
+Explanation: if you take fibonacci series 0 0 1 1 2 3 5. Because 5 is there is fibonacci series , it prints Yes
+Example 2:
+Input:
+4
+Output:
+No
+Explanation:if you take fibonacci series 0 0 1 1 2 3 5. Because 4 is there is not present in fibonacci series , it prints No.
+
+
+
+#include<stdio.h>
+int main()
+{
+int w;
+printf(“enter a number you want to check “);
+scanf(“%d”, &w);
+int a[1000];
+a[0]=0;
+a[1]=1;
+int i=1,j;
+while(a[i]<=w){
+i=i+1;
+a[i]=a[i-1]+a[i-2];
+}
+for(j=0;j<=i;j++){
+printf("%d ", a[j]);
+}
+if(a[j-2]==w){
+printf(" it is fibonacci number");
+}else{
+printf(" not fibonacci");
+}
+}
